@@ -2,6 +2,6 @@
  int main(){
 
 
-    printf ("tes aja ")
+    printf ("tes aja ");
     return 0;
  }
