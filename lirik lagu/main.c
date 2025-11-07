@@ -8,6 +8,7 @@
    printf("tes dulu");
    printf("tes 3");
    printf("Kelompok3");
+   printf ("tes");
     return 0;
 
  }
