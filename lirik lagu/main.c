@@ -1,19 +1,20 @@
 #include <stdio.h>
- int main(){
 
-   printf("halo");
-   printf("harus buat repo baru ni kita");
-   printf("tes commit");
-   printf ("tes aja "); 
-   printf("tes dulu");
-   printf("tes 3");
-   printf("Kelompok3");
-   printf ("tes");
-   printf("testt");
-   printf("test lagi");
-   printf("test test test");
-   printf("test ya");
-   printf("halooo");
+int main(void)
+{
+    printf("halo\n");
+    printf("harus buat repo baru ni kita\n");
+    printf("tes commit\n");
+    printf("tes aja\n");
+    printf("tes dulu\n");
+    printf("tes 3\n");
+    printf("Kelompok3\n");
+    printf("tes\n");
+    printf("testt\n");
+    printf("test lagi\n");
+    printf("test test test\n");
+    printf("test ya\n");
+    printf("halooo\n");
+
     return 0;
-
- }
+}
