@@ -13,6 +13,7 @@
    printf("test lagi");
    printf("test test test");
    printf("test ya");
+   printf("halooo");
     return 0;
 
  }
