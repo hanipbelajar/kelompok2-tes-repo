@@ -10,6 +10,7 @@
    printf("Kelompok3");
    printf ("tes");
    printf("testt");
+   printf("test lagi");
     return 0;
 
  }
