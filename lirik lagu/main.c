@@ -6,5 +6,6 @@
    printf("tes commit");
    printf ("tes aja "); 
    printf("tes dulu");
+   printf("tes 3");
     return 0;
  }
