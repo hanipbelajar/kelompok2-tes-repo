@@ -12,6 +12,7 @@
    printf("testt");
    printf("test lagi");
    printf("test test test");
+   printf("test ya");
     return 0;
 
  }
