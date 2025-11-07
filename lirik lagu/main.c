@@ -7,5 +7,7 @@
    printf ("tes aja "); 
    printf("tes dulu");
    printf("tes 3");
+   printf("Kelompok3");
     return 0;
+
  }
