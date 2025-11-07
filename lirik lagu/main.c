@@ -11,6 +11,7 @@
    printf ("tes");
    printf("testt");
    printf("test lagi");
+   printf("test test test");
     return 0;
 
  }
