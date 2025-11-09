@@ -15,6 +15,7 @@ int main(void)
     printf("test test test\n");
     printf("test ya\n");
     printf("halooo\n");
+    printf("di repo ni kita untuk tes program aja");
 
     return 0;
 }
