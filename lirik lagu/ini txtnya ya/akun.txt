@@ -1,2 +1,2 @@
-admin123,kingrapid, admin
-user123, jekgaming, user
+admin123 kingrapid
+user123 jekgaming
