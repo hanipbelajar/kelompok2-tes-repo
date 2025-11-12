@@ -128,3 +128,37 @@ void tambahAlat(){
     fprintf(file, "%d|%s|%s|%s|%d|%d|%d\n", alat.id, alat.nama, alat.model, alat.merk, alat.tahun, alat.jumlah, alat.tersedia);
     fclose(file);
 }
+
+void menuAdmin(){
+    int pilih;
+    do {
+        printf("\n=== MENU ADMIN ===\n");
+        printf("1. Lihat Alat\n");
+        printf("2. Lihat Pinjaman\n");
+        printf("3. Tambah Alat\n");
+        printf("4. Edit Alat\n");
+        printf("5. Hapus Alat\n");
+        printf("0. Keluar\n");
+        ulang:
+        printf("Pilih menu: ");
+        scanf("%d", &pilih);
+
+        switch (pilih)
+        {
+        case 1:
+            lihatAlat(); break;
+        case 2:
+            lihatPinjamanUser(); break;
+        case 3:
+            tambahAlat(); break;
+        case 4:
+            editAlat(); break;
+        case 5:
+            hapusAlat(); break;
+        case 0:
+            printf("Keluar dari menu admin.\n"); break;
+        default:
+            printf("Pilihan tidak valid.\n"); goto ulang;
+        }
+    } while (pilih != 0);
+}
