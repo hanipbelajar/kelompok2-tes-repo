@@ -45,7 +45,7 @@ void lihatAlat(){
     printf("\n=== DAFTAR ALAT LABORATURIUM YANG TERSEDIA ===\n");
     printf("ID      | NAMA        | MEREK    | MODEL   | TAHUN PRODUKSI   | JUMLAH UNIT   | TERSEDIA   \n");
 
-    while(fscanf(file, "%u, %49[^|], %49[^|], %49[^|], %u, %u, %u",
+    while(fscanf(file, "%u|%49[^|]|%49[^|]|%49[^|]|%u|%u|%u",
         &alat.id, alat.nama, alat.merek, alat.model, &alat.tahun, &alat.jumlah, &alat.tersedia)==7){
             
             printf("%2u | %-13s | %-10s | %9s  | %18u | %15u | %12u \n", 
@@ -82,7 +82,7 @@ void pinjamAlat(){
             printf("Gagal membuka file!\n");
             return;}
     int i=0;
-    while(fscanf(Alat, "%u, %49[^|], %49[^|], %49[^|], %u, %u, %u",
+    while(fscanf(Alat, "%u|%49[^|]|%49[^|]|%49[^|]|%u|%u|%u",
         &alat.id, alat.nama, alat.merek, alat.model, &alat.tahun, &alat.jumlah, &alat.tersedia)==7){
         if (alat.id == id && alat.tersedia >= jumlah_ingindipinjam){
             printf("alat ditemukan!\n");
@@ -116,7 +116,7 @@ void pinjamAlat(){
    
             int a=0;
             tempPinjam = fopen("tempPinjam.txt", "w");
-        while(fscanf(pinjam, "%u, %49[^|], %49[^|], %49[^|], %u, %u, %u",
+        while(fscanf(pinjam, "%u|%49[^|]|%49[^|]|%49[^|]|%u|%u|%u",
                 &pinjam_alat.id, pinjam_alat.nama, pinjam_alat.merek, pinjam_alat.model, 
                 &pinjam_alat.tahun, &pinjam_alat.jumlah, &pinjam_alat.tersedia)==7){
                      if (pinjam_alat.id == id){
@@ -176,7 +176,7 @@ void kembalikanAlat(){
             printf("Gagal membuka file!\n");
             return;}
     int i=0;
-    while(fscanf(pinjam, "%u, %49[^|], %49[^|], %49[^|], %u, %u, %u",
+    while(fscanf(pinjam, "%u|%49[^|]|%49[^|]|%49[^|]|%u|%u|%u",
         &pinjam_alat.id, pinjam_alat.nama, pinjam_alat.merek, pinjam_alat.model, &pinjam_alat.tahun, &pinjam_alat.jumlah, &pinjam_alat.tersedia)==7){
         if (pinjam_alat.id == id && pinjam_alat.tersedia >= jumlah_ingindipinjam){
             printf("alat ditemukan!\n");
@@ -210,7 +210,7 @@ void kembalikanAlat(){
    
             int a=0;
             tempAlat = fopen("tempalat.txt", "w");
-        while(fscanf(Alat, "%u, %49[^|], %49[^|], %49[^|], %u, %u, %u",
+        while(fscanf(Alat, "%u|%49[^|]|%49[^|]|%49[^|]|%u|%u|%u",
                 &alat.id,alat.nama, alat.merek, alat.model, 
                 &alat.tahun, &alat.jumlah, &alat.tersedia)==7){
                      if (alat.id == id){
