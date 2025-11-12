@@ -15,10 +15,10 @@
     void lihatPinjamanUser(){
         FILE *file;
         Alat pinjam_alat;
-        file = fopen("dipinjaman.txt","r");
+        file = fopen("dipinjam.txt","r");
         if (file == NULL){
             printf("belum ada yang di pinjam ");
-            return;
+            return; 
         } 
         printf("============================================================\n");
         printf("Data Alat Laboraterium\n");
@@ -35,11 +35,11 @@
 
 void lihatAlat(){ 
     FILE *file;
-    file = fopen("Alat.txt", "r");
+    file = fopen("alat.txt", "r");
     Alat alat;
 
     if (file == NULL){
-        printf("File Alat.txt tidak dapat ditemukan");
+        printf("File alat.txt tidak dapat ditemukan");
         return;
     }
     printf("\n=== DAFTAR ALAT LABORATURIUM YANG TERSEDIA ===\n");
@@ -72,17 +72,17 @@ void pinjamAlat(){
     FILE *pinjam;
     FILE *tempPinjam;
         
-    Alat = fopen("Alat.txt", "r");
+    Alat = fopen("alat.txt", "r");
         if(Alat == NULL){
             printf("Gagal membuka file!\n");
             return;}
 
-    tempAlat = fopen("tempAlat.txt", "w");
+    tempAlat = fopen("tempalat.txt", "w");
         if(tempAlat == NULL){
             printf("Gagal membuka file!\n");
             return;}
     int i=0;
-    while(fscanf(Alat, "%u, %49[^,], %49[^,], %49[^,], %u, %u, %u",
+    while(fscanf(Alat, "%u, %49[^|], %49[^|], %49[^|], %u, %u, %u",
         &alat.id, alat.nama, alat.merek, alat.model, &alat.tahun, &alat.jumlah, &alat.tersedia)==7){
         if (alat.id == id && alat.tersedia >= jumlah_ingindipinjam){
             printf("alat ditemukan!\n");
@@ -94,8 +94,8 @@ void pinjamAlat(){
         
         fclose(Alat);
         fclose(tempAlat);
-        remove("Alat.txt");
-        rename("tempAlat.txt", "Alat.txt");
+        remove("alat.txt");
+        rename("tempalat.txt", "alat.txt");
 
     if (i!=1)
     {
@@ -116,7 +116,7 @@ void pinjamAlat(){
    
             int a=0;
             tempPinjam = fopen("tempPinjam.txt", "w");
-        while(fscanf(pinjam, "%u, %49[^,], %49[^,], %49[^,], %u, %u, %u",
+        while(fscanf(pinjam, "%u, %49[^|], %49[^|], %49[^|], %u, %u, %u",
                 &pinjam_alat.id, pinjam_alat.nama, pinjam_alat.merek, pinjam_alat.model, 
                 &pinjam_alat.tahun, &pinjam_alat.jumlah, &pinjam_alat.tersedia)==7){
                      if (pinjam_alat.id == id){
@@ -176,7 +176,7 @@ void kembalikanAlat(){
             printf("Gagal membuka file!\n");
             return;}
     int i=0;
-    while(fscanf(pinjam, "%u, %49[^,], %49[^,], %49[^,], %u, %u, %u",
+    while(fscanf(pinjam, "%u, %49[^|], %49[^|], %49[^|], %u, %u, %u",
         &pinjam_alat.id, pinjam_alat.nama, pinjam_alat.merek, pinjam_alat.model, &pinjam_alat.tahun, &pinjam_alat.jumlah, &pinjam_alat.tersedia)==7){
         if (pinjam_alat.id == id && pinjam_alat.tersedia >= jumlah_ingindipinjam){
             printf("alat ditemukan!\n");
@@ -198,10 +198,10 @@ void kembalikanAlat(){
     }
     
     else if (i==1){
-        Alat = fopen("Alat.txt", "r");
+        Alat = fopen("alat.txt", "r");
         
         if(Alat == NULL){
-           Alat = fopen("Alat.txt", "w");
+           Alat = fopen("alat.txt", "w");
            fprintf(Alat, "%u, %s, %s, %s, %u, %u, %u\n",
             alat.id, alat.nama, alat.merek, alat.model, 
             alat.tahun, alat.jumlah, jumlah_ingindipinjam);
@@ -209,8 +209,8 @@ void kembalikanAlat(){
             return;}
    
             int a=0;
-            tempAlat = fopen("tempAlat.txt", "w");
-        while(fscanf(Alat, "%u, %49[^,], %49[^,], %49[^,], %u, %u, %u",
+            tempAlat = fopen("tempalat.txt", "w");
+        while(fscanf(Alat, "%u, %49[^|], %49[^|], %49[^|], %u, %u, %u",
                 &alat.id,alat.nama, alat.merek, alat.model, 
                 &alat.tahun, &alat.jumlah, &alat.tersedia)==7){
                      if (alat.id == id){
@@ -222,20 +222,20 @@ void kembalikanAlat(){
     if(a==1){
     fclose(Alat);
     fclose(tempAlat);
-    remove("Alat.txt");
-    rename("tempAlat.txt", "Alat.txt");
+    remove("alat.txt");
+    rename("tempalat.txt", "alat.txt");
     return;
     }
     else
     {
     fclose(Alat);
-    Alat = fopen("Alat.txt", "a");
+    Alat = fopen("alat.txt", "a");
     fprintf(Alat, "%u, %s, %s, %s, %u, %u, %u\n",
             alat.id, alat.nama, alat.merek, alat.model, 
             alat.tahun, alat.jumlah, jumlah_ingindipinjam);
     fclose(Alat);
     fclose(tempAlat);
-    remove("tempAlat.txt");
+    remove("tempalat.txt");
     return;
     }
     printf("data peminjaman telah disimpan ke lihatpinjam.txt.");
