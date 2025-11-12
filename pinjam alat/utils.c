@@ -45,7 +45,7 @@ void lihatAlat(){
     printf("\n=== DAFTAR ALAT LABORATURIUM YANG TERSEDIA ===\n");
     printf("ID      | NAMA        | MEREK    | MODEL   | TAHUN PRODUKSI   | JUMLAH UNIT   | TERSEDIA   \n");
 
-    while(fscanf(file, "%u, %49[^,], %49[^,], %49[^,], %u, %u, %u",
+    while(fscanf(file, "%u, %49[^|], %49[^|], %49[^|], %u, %u, %u",
         &alat.id, alat.nama, alat.merek, alat.model, &alat.tahun, &alat.jumlah, &alat.tersedia)==7){
             
             printf("%2u | %-13s | %-10s | %9s  | %18u | %15u | %12u \n", 
