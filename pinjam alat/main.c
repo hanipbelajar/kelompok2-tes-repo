@@ -1,5 +1,8 @@
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
+#include "admin/admin.h"
+#include "user/user.h"
 
 int main(int argc,char *argv[]){
 

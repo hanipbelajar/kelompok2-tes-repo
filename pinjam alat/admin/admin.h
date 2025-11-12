@@ -3,5 +3,6 @@ void hapusAlat();
 void editAlat();
 void tambahAlat();
 void lihatAlat();
+void menuAdmin();
 
 
