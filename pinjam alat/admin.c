@@ -67,7 +67,7 @@ void editAlat(){
     int ditemukan = 0;
 
     while (fgets(alat.simpan, sizeof(alat.simpan), file) != NULL) {
-        sscanf(alat.simpan, "%d|%[^|]|%[^|]|%[^|]|%d|%d|%d", &alat.id, alat.nama, alat.model, alat.merk, &alat.tahun, &alat.jumlah, &alat.tersedia);
+        sscanf(alat.simpan, "%u|%[^|]|%[^|]|%[^|]|%u|%u|%u", &alat.id, alat.nama, alat.model, alat.merk, &alat.tahun, &alat.jumlah, &alat.tersedia);
         if(alat.id == idEdit){
             ditemukan = 1;
             printf("Masukkan nama alat baru: ");

@@ -25,7 +25,7 @@
         printf("============================================================\n");
         printf("Id |Nama Alat      |Merek    |model       |tahun      |jumlah |Tersedia \n  ");
        printf("============================================================\n");
-        while (fscanf(file,"%d %49s %49s %49s %d %d %d\n", pinjam_alat.id,pinjam_alat.nama, pinjam_alat.merek, pinjam_alat.model, &pinjam_alat.tahun, &pinjam_alat.jumlah,&pinjam_alat.tersedia) != EOF){
+        while (fscanf(file,"%u|%49[^|]|%49[^|]|%49[^|]|%u|%u|%u\n", pinjam_alat.id,pinjam_alat.nama, pinjam_alat.merek, pinjam_alat.model, &pinjam_alat.tahun, &pinjam_alat.jumlah,&pinjam_alat.tersedia) != EOF){
             printf("%-3d|%-15s|%-8s|%-11s|%-11d|%-6d|%-6d\n",pinjam_alat.id, pinjam_alat.nama, pinjam_alat.merek, pinjam_alat.model, pinjam_alat.tahun, pinjam_alat.jumlah, pinjam_alat.tersedia);
         }
         printf("============================================================\n");
