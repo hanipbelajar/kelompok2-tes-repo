@@ -5,9 +5,15 @@ typedef struct  {
     unsigned int tahun, jumlah,tersedia, id;
 } data;
 
-
-
-
+typedef struct {
+    unsigned int id;
+    char nama[50];
+    char merek[50];
+    char model[50];
+    unsigned int tahun;
+    unsigned int jumlah;
+    unsigned int tersedia;
+} Alat;
 
 void hapusAlat(){
     FILE *temp, *file;
