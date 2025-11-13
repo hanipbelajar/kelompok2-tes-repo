@@ -1,3 +1,7 @@
+#include<stdio.h>
+#include "utils.h"
+#include "user.h"
+#include "admin.h"
 
 void menuUser(){
     int pilih;

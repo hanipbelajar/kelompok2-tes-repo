@@ -1,12 +1,13 @@
 #include <stdio.h>
+#include<string.h>
+#include "utils.h"
+#include "user.h"
+#include "admin.h"
 
 typedef struct  {
     char simpan[100], nama[50],model[50], merk[50];
     unsigned int tahun, jumlah,tersedia, id;
 } data;
-
-
-
 
 
 void hapusAlat(){

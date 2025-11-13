@@ -1,7 +1,6 @@
-1|Labu Erlenmeyer|Pyrex|250ml|2021|20|19
-2|Statif dan Klem|Iwaki|Universal|2020|10|9
-3|Mikroskop|Olympus|CX23|2019|43|43
-5|Termometer|Fisher|Glass|2022|12|11
-7|Pipet Tetes|Brand|BlueLine|2022|15|15
-8|Bunsen Burner|Humboldt|HB100|2023|8|8
-
+1, Labu Erlenmeyer, Pyrex, 250ml, 2021, 20, 19
+2, Statif dan Klem, Iwaki, Universal, 2020, 10, 9
+3, Mikroskop, Olympus, CX23, 2019, 43, 43
+5, Termometer, Fisher, Glass, 2022, 12, 11
+7, Pipet Tetes, Brand, BlueLine, 2022, 15, 15
+8, Bunsen Burner, Humboldt, HB100, 2023, 8, 8
