@@ -221,7 +221,7 @@ void pinjamAlat(){
     
     else if (i==1){
         pinjam = fopen("dipinjam.txt", "r");
-        char c;
+        
         
         if((pinjam == NULL) || (fgetc(pinjam)==EOF)){
            pinjam = fopen("dipinjam.txt", "w");
