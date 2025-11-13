@@ -4,6 +4,4 @@
 5|Termometer|Fisher|Glass|2022|12|12
 7|Pipet Tetes|Brand|BlueLine|2022|15|15
 8|Bunsen Burner|Humboldt|HB100|2023|8|8
-
-
-
+10|monitor|zowe|zowe|2030|100|100
