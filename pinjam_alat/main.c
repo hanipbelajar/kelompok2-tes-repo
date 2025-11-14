@@ -380,7 +380,7 @@ void hapusAlat(){
     int ditemukan = 0;
     
     while (fgets(alat.simpan, sizeof(alat.simpan), file) != NULL){
-        sscanf(alat.simpan, "%d|", &alat.id);
+        sscanf(alat.simpan, "%u|", &alat.id);
         if(alat.id != idHapus){
             fputs(alat.simpan, temp);
         } else {
@@ -418,21 +418,21 @@ void editAlat(){
     int ditemukan = 0;
 
     while (fgets(alat.simpan, sizeof(alat.simpan), file) != NULL) {
-        sscanf(alat.simpan, "%u|%[^|]|%[^|]|%[^|]|%u|%u|%u", &alat.id, alat.nama, alat.model, alat.merk, &alat.tahun, &alat.jumlah, &alat.tersedia);
+        sscanf(alat.simpan, "%u|%[^|]|%[^|]|%[^|]|%u|%u|%u", &alat.id, alat.nama, alat.merk, alat.model, &alat.tahun, &alat.jumlah, &alat.tersedia);
         if(alat.id == idEdit){
             ditemukan = 1;
             printf("Masukkan nama alat baru: ");
             scanf(" %[^\n]", alat.nama);
             printf("Masukkan model alat baru: ");
-            scanf(" %[^\n]", alat.model);
-            printf("Masukkan merk alat baru: ");
             scanf(" %[^\n]", alat.merk);
+            printf("Masukkan merk alat baru: ");
+            scanf(" %[^\n]", alat.model);
             printf("Masukkan tahun alat baru: ");
             scanf("%d", &alat.tahun);
             printf("Masukkan jumlah alat baru: ");
             scanf("%d", &alat.jumlah);
             alat.tersedia = alat.jumlah; 
-            fprintf(temp, "%d|%s|%s|%s|%d|%d|%d\n", alat.id, alat.nama, alat.model, alat.merk, alat.tahun, alat.jumlah, alat.tersedia);
+            fprintf(temp, "%u|%s|%s|%s|%u|%u|%u\n", alat.id, alat.nama, alat.merk, alat.model, alat.tahun, alat.jumlah, alat.tersedia);
         } else {
             fputs(alat.simpan, temp);
         }
@@ -476,6 +476,6 @@ void tambahAlat(){
     alat.tersedia = alat.jumlah;
 
 
-    fprintf(file, "%d|%s|%s|%s|%d|%d|%d\n", alat.id, alat.nama, alat.model, alat.merk, alat.tahun, alat.jumlah, alat.tersedia);
+    fprintf(file, "%u|%s|%s|%s|%u|%u|%u\n", alat.id, alat.nama, alat.merk, alat.model, alat.tahun, alat.jumlah, alat.tersedia);
     fclose(file);
 }
