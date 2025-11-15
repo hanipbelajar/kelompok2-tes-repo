@@ -428,9 +428,9 @@ void editAlat(){
             printf("Masukkan merk alat baru: ");
             scanf(" %[^\n]", alat.model);
             printf("Masukkan tahun alat baru: ");
-            scanf("%d", &alat.tahun);
+            scanf("%u", &alat.tahun);
             printf("Masukkan jumlah alat baru: ");
-            scanf("%d", &alat.jumlah);
+            scanf("%u", &alat.jumlah);
             alat.tersedia = alat.jumlah; 
             fprintf(temp, "%u|%s|%s|%s|%u|%u|%u\n", alat.id, alat.nama, alat.merk, alat.model, alat.tahun, alat.jumlah, alat.tersedia);
         } else {
@@ -444,9 +444,9 @@ void editAlat(){
         rename("temp.txt", "alat.txt");
 
         if(ditemukan){
-            printf("Alat dengan id %d sudah diupdate.\n", idEdit);
+            printf("Alat dengan id %u sudah diupdate.\n", idEdit);
         } else {
-            printf("Alat dengan id %d tidak ada di dalam daftar.\n", idEdit);
+            printf("Alat dengan id %u tidak ada di dalam daftar.\n", idEdit);
         }
 }
 
@@ -462,7 +462,7 @@ void tambahAlat(){
 
     printf("======= Masukkan data alat barunya woi! =======");
     printf("Masukkan id alat baru : ");
-    scanf("%d",&alat.id);
+    scanf("%u",&alat.id);
     printf("Masukkan nama alat baru yang mau ditambahkan : ");
     scanf(" %[^\n]", alat.nama);
     printf("Masukkan model alat baru yang mau ditambahkan : ");
@@ -470,9 +470,9 @@ void tambahAlat(){
     printf("Masukkan merk alat baru yang mau ditambahkan : ");
     scanf(" %[^\n]", alat.merk);
     printf("Masukkan tahun alat baru yang mau ditambahkan : ");
-    scanf("%d", &alat.tahun);
+    scanf("%u", &alat.tahun);
     printf("Masukkan jumlah alat baru yang mau ditambahkan : ");
-    scanf("%d", &alat.jumlah);
+    scanf("%u", &alat.jumlah);
     alat.tersedia = alat.jumlah;
 
 
